@@ -11,8 +11,7 @@
 
 
 ### Delete Container and Image
-<p>
-docker stop $(docker ps -q)
-docker rm $(docker ps -q -a)
-docker rmi $(docker images -q)
-</p>
+<p>$ docker stop $(docker ps -q)</p>
+<p>$ docker rm $(docker ps -q -a)</p>
+<p>$ docker rmi $(docker images -q)</p>
+
