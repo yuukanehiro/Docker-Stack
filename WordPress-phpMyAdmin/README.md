@@ -10,3 +10,9 @@
 <p>$ docker-compose up -d</p>
 
 
+### Delete Container and Image
+<p>
+docker stop $(docker ps -q)
+docker rm $(docker ps -q -a)
+docker rmi $(docker images -q)
+</p>
