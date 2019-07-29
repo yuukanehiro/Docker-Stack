@@ -13,6 +13,8 @@ $ cd Docker-Stack/WordPress-phpMyAdmin/
 $ docker-compose up -d
 ```
 
+
+<hr/>
 ### Delete Container and Image
 
 ```
