@@ -1,17 +1,22 @@
 
 # 1_init_Setup_local
 
-<p>$ chmod +x Docker-Stack/WordPress-phpMyAdmin/shell/1_init_Setup_local.sh</p>
-<p>$ sh Docker-Stack/WordPress-phpMyAdmin/shell/1_init_Setup_local.sh</p>
-
+```
+$ chmod +x Docker-Stack/WordPress-phpMyAdmin/shell/1_init_Setup_local.sh
+$ sh Docker-Stack/WordPress-phpMyAdmin/shell/1_init_Setup_local.sh
+```
 
 # 2. Build Docker
-<p>$ cd Docker-Stack/WordPress-phpMyAdmin/</p>
-<p>$ docker-compose up -d</p>
 
+```
+$ cd Docker-Stack/WordPress-phpMyAdmin/
+$ docker-compose up -d
+```
 
 ### Delete Container and Image
-<p>$ docker stop $(docker ps -q)</p>
-<p>$ docker rm $(docker ps -q -a)</p>
-<p>$ docker rmi $(docker images -q)</p>
 
+```
+$ docker stop $(docker ps -q)
+$ docker rm $(docker ps -q -a)
+$ docker rmi $(docker images -q)
+```
