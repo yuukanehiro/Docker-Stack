@@ -15,7 +15,8 @@ $ docker-compose up -d
 
 
 <hr/>
-### Delete Container and Image
+
+# Delete Container and Image
 
 ```
 $ docker stop $(docker ps -q)
