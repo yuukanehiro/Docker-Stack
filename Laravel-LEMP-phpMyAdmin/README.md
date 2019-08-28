@@ -28,7 +28,15 @@ $ cd $HOME/Shell-Stack-master/WP-LEMP-Simple/Laravel-LEMP-phpMyAdmin/src/laravel
 <p>2. Setting Environment</p>
 
 ```
+$ cp .env.example .env
 $ vi .env
+
++ DB_CONNECTION=mysql
++ DB_HOST=mysql80
++ DB_PORT=3306
++ DB_DATABASE=appdb
++ DB_USERNAME=root
++ DB_PASSWORD=secret
 ```
 
 
