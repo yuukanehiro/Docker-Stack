@@ -59,7 +59,7 @@ http://localhost:8080
 
   
   
-<p>Restart</p>
+## Restart
 
 ```
 $ docker stop $(docker ps -q)
