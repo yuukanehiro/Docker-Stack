@@ -20,33 +20,24 @@ Simple Install Laravel, Nginx, PHP-FPM, PHP7, MySQL8.0
 <p>1. Run Laravel</p>
 
 ```
-$ git clone 
-$ yum -y install wget git unzip
-$ wget https://github.com/yuukanehiro/Shell-Stack/archive/master.zip
-$ unzip master.zip
+$ git clone git@github.com:yuukanehiro/Docker-Stack.git
+$ cd $HOME/Shell-Stack-master/WP-LEMP-Simple/Laravel-LEMP-phpMyAdmin/src/laravel
 ```
 
 
-<p>2. Change Directory</p>
-
-```
-$ cd $HOME/Shell-Stack-master/WP-LEMP-Simple
-```
-
-
-<p>3. Setting Environment</p>
+<p>2. Setting Environment</p>
 
 ```
 $ vi .env
 ```
 
-<p>4. Execute!</p>
+
+<p>3. Run Docker</p>
 
 ```
-$ source .env
-$ sh 1_init.sh
+$ docker-compose build --no-cache
+$ docker-compose up -d
 ```
-
 
 
 <p>Access!</p>
