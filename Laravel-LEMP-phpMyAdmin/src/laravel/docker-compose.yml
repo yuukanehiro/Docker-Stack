@@ -14,6 +14,7 @@ services:
       - "../db:/var/lib/mysql"
       - "../logs:/var/log/mysql"
       - "./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf"
+
   testdb:
     container_name: "testdb"
     image: mysql:8.0.16
@@ -27,6 +28,7 @@ services:
     environment:
         MYSQL_DATABASE: testing
         MYSQL_ROOT_PASSWORD: secret
+
   nginx:
     container_name: "nginx"
     build:
@@ -39,6 +41,7 @@ services:
     depends_on:
       - php-fpm
     restart: always
+
   php-fpm:
     container_name: "php-fpm"
     build:
@@ -49,6 +52,8 @@ services:
     restart: always
     links:
      - mysql80
+     - redis
+
   pma:
     container_name: "pma"
     image: phpmyadmin/phpmyadmin:latest
@@ -65,6 +70,16 @@ services:
       - mysql80
     links:
       - mysql80
+
+
+  redis:
+    restart: always
+    image: redis:latest
+    volumes:
+      - ../redis:/data
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
 
 
   nginx_for_schemaspy:
