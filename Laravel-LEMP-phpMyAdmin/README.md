@@ -30,24 +30,11 @@ $ cd $HOME/Documents/develop/Laravel-test/laravel/
 <p>2. Run Docker</p>
 
 ```
-$ docker-compose build --no-cache
-$ docker-compose up -d
+$ sh hard_update.sh
 ```
 
-<p>3. Setting Environment</p>
 
-```
-$ vi .env
-
-+ DB_CONNECTION=mysql
-+ DB_HOST=mysql80
-+ DB_PORT=3306
-+ DB_DATABASE=appdb
-+ DB_USERNAME=root
-+ DB_PASSWORD=secret
-```
-
-<p>4. Access!</p>
+<p>3. Access!</p>
 
 Laravel  
 http://localhost/  
@@ -55,9 +42,11 @@ http://localhost/
 phpMyAdmin  
 http://localhost:8080  
 
+schemaspy  
+http://localhost:8081  
 
-  
-  
+
+
 ## Restart
 
 ```
@@ -65,18 +54,11 @@ $ docker stop $(docker ps -q)
 $ docker rm $(docker ps -q -a)
 $ docker rmi $(docker images -q)
 
-$ docker-compose build --no-cache
-$ docker-compose up -d
+$ sh hard_update.sh
 
 
 $ vi .env
 
-+ DB_CONNECTION=mysql
-+ DB_HOST=mysql80
-+ DB_PORT=3306
-+ DB_DATABASE=appdb
-+ DB_USERNAME=root
-+ DB_PASSWORD=secret
 ```
 
 

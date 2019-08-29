@@ -6,11 +6,12 @@ SCRIPT_DIR=`dirname $0`
 cd $SCRIPT_DIR
 
 
-echo "Docker+Laravel Update ...Start"
 # .envをローカル開発用に更新
 rm -f ./.env &&
 cp ../env/.env.local ./.env &&
 
+# Schemaspy Clean
+rm -rf ./schemaspy &&
 
 # dockerの既存イメージ, コンテナの削除
 #docker stop $(docker ps -q) &&
