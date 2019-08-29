@@ -27,11 +27,16 @@ $ rsync -arv $HOME/Documents/develop/Docker-Stack/Laravel-LEMP-phpMyAdmin/src/ $
 $ cd $HOME/Documents/develop/Laravel-test/laravel/
 ```
 
-
-<p>2. Setting Environment</p>
+<p>2. Run Docker</p>
 
 ```
-$ cp .env.example .env
+$ docker-compose build --no-cache
+$ docker-compose up -d
+```
+
+<p>3. Setting Environment</p>
+
+```
 $ vi .env
 
 + DB_CONNECTION=mysql
@@ -41,15 +46,6 @@ $ vi .env
 + DB_USERNAME=root
 + DB_PASSWORD=secret
 ```
-
-
-<p>3. Run Docker</p>
-
-```
-$ docker-compose build --no-cache
-$ docker-compose up -d
-```
-
 
 <p>4. Access!</p>
 
@@ -71,6 +67,16 @@ $ docker rmi $(docker images -q)
 
 $ docker-compose build --no-cache
 $ docker-compose up -d
+
+
+$ vi .env
+
++ DB_CONNECTION=mysql
++ DB_HOST=mysql80
++ DB_PORT=3306
++ DB_DATABASE=appdb
++ DB_USERNAME=root
++ DB_PASSWORD=secret
 ```
 
 
