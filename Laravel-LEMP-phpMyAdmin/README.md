@@ -27,6 +27,13 @@ $ rsync -arv $HOME/Documents/develop/Docker-Stack/Laravel-LEMP-phpMyAdmin/src/ $
 $ cd $HOME/Documents/develop/Laravel-test/laravel/
 ```
 
+<p>2. Edit .env</p>
+
+```
+$ vi $HOME/Documents/develop/Laravel-test/env/.env.local
+```
+
+
 <p>2. Run Docker</p>
 
 ```
@@ -55,10 +62,6 @@ $ docker rm $(docker ps -q -a)
 $ docker rmi $(docker images -q)
 
 $ sh hard_update.sh
-
-
-$ vi .env
-
 ```
 
 
