@@ -27,7 +27,7 @@ ENV PATH $PATH:/composer/vendor/bin
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 RUN composer global require hirak/prestissimo
-RUN cp /app/.env.example /app/.env
+RUN cp .env.example .env
 RUN composer install
 RUN php artisan key:generate
 RUN php artisan cache:clear
