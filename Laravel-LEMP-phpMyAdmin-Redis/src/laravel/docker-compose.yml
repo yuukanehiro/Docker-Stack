@@ -96,6 +96,8 @@ services:
       - LANG=ja_JP.UTF-8
       - TZ=Asia/Tokyo
     command: "nginx -g 'daemon off;'"
+    depends_on:
+      - schemaspy
   schemaspy:
     build: ./docker/schemaspy
     image: treetips/schemaspy-mysql

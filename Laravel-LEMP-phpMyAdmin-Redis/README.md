@@ -5,7 +5,7 @@ Overview
 
 ## Description
 
-Simple Install Laravel, Nginx, PHP-FPM, PHP7, MySQL8.0
+Simple Install Laravel, Nginx, PHP-FPM, PHP7, MySQL8.0, phpMyAdmin, Redis
 
 
 ## Requirement
