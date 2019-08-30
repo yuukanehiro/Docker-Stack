@@ -1,4 +1,4 @@
-Laravel+LEMP+phpMyAdmin+Redis
+Laravel+LEMP+phpMyAdmin
 ====
 
 Overview
