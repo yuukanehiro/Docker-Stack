@@ -56,11 +56,16 @@ http://localhost:8081
 
 ## Restart
 
+
 ```
+docker-compose down --rmi all --volumes
+sh hard_update.sh
+
+or
+
 $ docker stop $(docker ps -q)
 $ docker rm $(docker ps -q -a)
 $ docker rmi $(docker images -q)
-
 $ sh hard_update.sh
 ```
 
