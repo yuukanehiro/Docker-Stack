@@ -34,4 +34,7 @@ docker-compose exec php-fpm php artisan migrate:refresh --seed
 docker-compose exec php-fpm php artisan cache:clear &&
 docker-compose exec php-fpm php artisan config:clear &&
 docker-compose exec php-fpm php artisan route:clear &&
-docker-compose exec php-fpm php artisan view:clear
+docker-compose exec php-fpm php artisan view:clear &&
+
+# キーの作成
+docker-compose exec php-fpm php artisan key:generate
