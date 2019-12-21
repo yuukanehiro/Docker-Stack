@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+   db:
+     image: mysql:5.7
+     container_name: "mysql57-test"
+     volumes:
+       - ./db_data:/var/lib/mysql
+     restart: always
+     command:
+       - --sql-mode=NO_ENGINE_SUBSTITUTION
+     environment:
+       MYSQL_ROOT_PASSWORD: root
+   pma:
+     container_name: "pma-test"
+     image: phpmyadmin/phpmyadmin:latest
+     environment:
+       PMA_HOST: db
+     ports:
+     - "18080:80"
+     restart: always
+     links:
+       - db
